@@ -13,9 +13,13 @@ import Vuetify from 'vuetify';
 import VueRouter from 'vue-router';
 import VueResource  from 'vue-resource';
 
+import en from 'vuetify/es5/locale/en'
+import ru from 'vuetify/es5/locale/ru'
+
 Vue.use(VueRouter)
 Vue.use(VueResource)
-Vue.use(Vuetify)
+Vue.use(Vuetify, { lang: { locales: { en, ru }, current: 'ru' }})
+
 
 window.Vue = require('vue');
 
@@ -36,6 +40,26 @@ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+// ----------------------------
+
+import IndexPage from './views/IndexPage'
+
+
+const routes = [
+    { path: '/', name: 'index', component: IndexPage },
+    { path: '*', redirect: '/' },
+];
+
+// ----------------------------
+
+const router = new VueRouter({
+    mode: 'history',
+    routes: routes
+});
+
+
+
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router
 });
