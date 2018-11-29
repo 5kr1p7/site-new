@@ -17,7 +17,6 @@ html, body {
     padding-top: 40px;
 }
 
-
 #contactButtons a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
