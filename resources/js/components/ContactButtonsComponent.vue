@@ -18,7 +18,7 @@
         data() {
             return {
                 socButtons: [
-                    { name: 'twitter', color: '#1da1f2', link: 'https://twiiter.com/5kr1p7' },
+                    { name: 'twitter', color: '#1da1f2', link: 'https://twitter.com/5kr1p7' },
                     { name: 'vkontakte', color: '#45668e', link: 'https://vk.com/alexshangin' },
                     { name: 'linkedin', color: '#0077b5', link: 'https://www.linkedin.com/in/shangin/' },
                     { name: 'instagram', color: '#833ab4', link: 'https://www.instagram.com/5kr1p7/' },
