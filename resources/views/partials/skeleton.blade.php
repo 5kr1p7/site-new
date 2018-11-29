@@ -7,7 +7,8 @@
     <!-- Styles -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
     <link href="//unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <title>@yield('title') — AlexShangin.Ru</title>
 </head>
