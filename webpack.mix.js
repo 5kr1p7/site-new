@@ -14,7 +14,7 @@ const mix = require('laravel-mix');
 mix.browserSync(
     {
 	https: true,
-	proxy: "https://alexshangin.ru"
+	proxy: "http://site.new"
     });
 
 mix.js('resources/js/app.js', 'public/js')

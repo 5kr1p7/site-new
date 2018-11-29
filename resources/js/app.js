@@ -7,6 +7,16 @@
 
 require('./bootstrap');
 
+import 'babel-polyfill'
+import Vue from 'vue';
+import Vuetify from 'vuetify';
+import VueRouter from 'vue-router';
+import VueResource  from 'vue-resource';
+
+Vue.use(VueRouter)
+Vue.use(VueResource)
+Vue.use(Vuetify)
+
 window.Vue = require('vue');
 
 /**
@@ -17,10 +27,8 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
-
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+const files = require.context('./', true, /\.vue$/i)
+files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
