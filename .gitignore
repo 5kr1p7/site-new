@@ -62,3 +62,4 @@ cmake-build-*/
 .idea/sonarlint
 package-lock.json
 public/css/app.css
+public/css/app.css
