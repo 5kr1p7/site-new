@@ -2,7 +2,7 @@
     <v-layout id="contactButtons" align-center justify-center row wrap>
         <v-flex class="text-xs-center d-flex align-center" xs4 v-for="socButton in socButtons" :key="socButton.name">
             <v-tooltip bottom>
-                <v-btn fab dark large slot="activator" :color="socButton.color" :href="socButton.link">
+                <v-btn fab dark large slot="activator" :color="socButton.color" :href="socButton.link" target="_blank">
                     <v-icon dark>socicon-{{ socButton.name }}</v-icon>
                 </v-btn>
                 <span>{{ socButton.name.charAt(0).toUpperCase() + socButton.name.slice(1) }}</span>
