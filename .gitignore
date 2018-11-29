@@ -61,5 +61,3 @@ cmake-build-*/
 .idea/caches/build_file_checksums.ser
 .idea/sonarlint
 package-lock.json
-public/css/app.css
-public/css/app.css
