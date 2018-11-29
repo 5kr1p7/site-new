@@ -1,6 +1,7 @@
 <template>
-    <v-layout align-center justify-center>
-        <p class="text-xs-center display-3">Сайт находится в разработке.</p>
+    <v-layout align-center justify-center column>
+        <p class="text-xs-center display-1">Сайт находится в разработке.</p>
+        <ContactButtonsComponent></ContactButtonsComponent>
     </v-layout>
 </template>
 
