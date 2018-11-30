@@ -6,8 +6,6 @@
         <v-flex xs12>
             <p class="text-xs-center display-1">Сайт находится в разработке.</p>
         </v-flex>
-        <v-flex xs12 md4 offset-md4>
-            <ContactButtons></ContactButtons>
         </v-flex>
     </v-layout>
 </template>
