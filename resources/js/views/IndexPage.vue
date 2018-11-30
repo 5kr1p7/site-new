@@ -1,7 +1,7 @@
 <template>
     <v-layout align-center justify-center column>
         <p class="text-xs-center display-1">Сайт находится в разработке.</p>
-        <ContactButtonsComponent></ContactButtonsComponent>
+        <ContactButtons></ContactButtons>
     </v-layout>
 </template>
 
