@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="app">
-        <v-app light>
+        <v-app v-cloak light>
             <div>
                 <v-content class="flex-center position-ref full-height">
                     <v-container fluid>
