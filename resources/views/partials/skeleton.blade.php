@@ -15,13 +15,15 @@
 </head>
 <body>
     <div id="app">
-        <v-app v-cloak light>
+        <v-app light>
             <div>
                 <v-content class="flex-center position-ref full-height">
                     <v-container fluid>
                         <div class="content">
                             <toolbar></toolbar>
-                            <router-view></router-view>
+                            <transition name="fade" mode="out-in">
+                                <router-view v-cloak></router-view>
+                            </transition>
                         </div>
                     </v-container>
                 </v-content>
