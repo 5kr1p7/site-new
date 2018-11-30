@@ -20,6 +20,7 @@
                 <v-content class="flex-center position-ref full-height">
                     <v-container fluid>
                         <div class="content">
+                            <toolbar></toolbar>
                             <router-view></router-view>
                         </div>
                     </v-container>
@@ -31,3 +32,9 @@
     <script src="//cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
 </body>
 </html>
+<script>
+    import Toolbar from "../../js/components/Toolbar";
+    export default {
+        components: {Toolbar}
+    }
+</script>
