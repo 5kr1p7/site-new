@@ -18,7 +18,7 @@
         <v-app light>
             <div>
                 <toolbar></toolbar>
-                <v-content class="flex-center position-ref full-height">
+                <v-content class="position-ref">
                     <v-container fluid>
                         <div class="content">
                             <transition name="fade" mode="out-in">
