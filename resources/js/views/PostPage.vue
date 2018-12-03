@@ -21,7 +21,7 @@
             }
         },
 
-        mounted() {
+        created() {
             this.getPost()
         },
 

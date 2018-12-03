@@ -12,7 +12,7 @@
                 posts: {},
             }
         },
-        mounted() {
+        created() {
             this.getPosts()
         },
         methods: {
