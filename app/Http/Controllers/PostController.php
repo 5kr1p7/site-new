@@ -49,6 +49,12 @@ class PostController extends Controller
         //
     }
 
+    public function showBySlug($slug)
+    {
+        return response(Post::where('slug', $slug)->get(['id', 'title', 'text', 'created_at', 'user_id'])->jsonSerialize(), Response::HTTP_OK);
+    }
+
+
     /**
      * Show the form for editing the specified resource.
      *
