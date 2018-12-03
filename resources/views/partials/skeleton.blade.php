@@ -17,10 +17,10 @@
     <div id="app">
         <v-app light>
             <div>
+                <toolbar></toolbar>
                 <v-content class="flex-center position-ref full-height">
                     <v-container fluid>
                         <div class="content">
-                            <toolbar></toolbar>
                             <transition name="fade" mode="out-in">
                                 <router-view v-cloak></router-view>
                             </transition>
