@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class PostController extends Controller
 {
@@ -14,9 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return response(Post::orderBy('created_at', 'desc')->get(['id', 'title', 'slug', 'partial', 'created_at', 'user_id'])->jsonSerialize(), Response::HTTP_OK);
     }
-
     /**
      * Show the form for creating a new resource.
      *

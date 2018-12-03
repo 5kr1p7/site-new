@@ -44,10 +44,12 @@ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(
 
 import IndexPage from './views/IndexPage'
 import ContactPage from './views/ContactPage'
+import BlogPage from './views/BlogPage'
 
 
 const routes = [
     { path: '/', name: 'index', component: IndexPage },
+    { path: '/blog', name: 'blog', component: BlogPage },
     { path: '/contacts', name: 'contacts', component: ContactPage },
 
     { path: '*', redirect: '/' },

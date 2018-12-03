@@ -45,7 +45,8 @@
             return {
                 drawer: false,
                 menuitems: [
-                    { title: 'Блог', icon: 'subject', link: '/' },
+                    { title: 'Главная', icon: 'home', link: '/' },
+                    { title: 'Блог', icon: 'subject', link: '/blog' },
                     { title: 'Контакты', icon: 'perm_contact_calendar', link: '/contacts' },
                     { title: 'Резюме', icon: 'assignment_turned_in', link: '/resume' }
                 ]
