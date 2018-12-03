@@ -12,4 +12,4 @@
 */
 
 Route::view('/', 'index');
-Route::view('{any}', 'index')->where('any','.*');
+Route::view('{any}', 'index')->where('any', '.*');
