@@ -1,8 +1,12 @@
 <template>
-    <div>
-        <h1>{{ cur_post.title }}</h1>
-        <p v-html="compiledMarkdown"></p>
-    </div>
+    <v-container>
+        <v-layout row wrap>
+            <v-flex xs12>
+                <h1>{{ cur_post.title }}</h1>
+                <p v-html="compiledMarkdown"></p>
+            </v-flex>
+        </v-layout>
+    </v-container>
 </template>
 
 <script>
@@ -36,7 +40,15 @@
 </script>
 
 <style scoped>
+    .container {
+        padding-top: 0px;
+    }
+
     p {
         text-indent: 20px;
+    }
+
+    h1 {
+        padding-bottom: 20px;
     }
 </style>
