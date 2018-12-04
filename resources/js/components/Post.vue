@@ -8,7 +8,7 @@
                     <v-flex xs10 md11>
                         <v-card-title primary-title>
                             <div>
-                                <div class="headline mb-0 post-title"><a :href="'/blog/'+slug">{{ title }}</a>
+                                <div class="headline mb-0 post-title"><router-link :to="{ name: 'post', params: { slug: slug }}">{{ title }}</router-link>
                                 </div>
                                 <div class="post-partial">
                                     <p>
