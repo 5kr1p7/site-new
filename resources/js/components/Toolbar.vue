@@ -57,5 +57,7 @@
 </script>
 
 <style scoped>
-
+    .theme--light.v-toolbar {
+        background-color: inherit;
+    }
 </style>
