@@ -1,5 +1,6 @@
 
 window._ = require('lodash');
+slug = require('slug')
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support

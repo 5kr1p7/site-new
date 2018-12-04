@@ -4,6 +4,7 @@
             <v-flex xs12>
                 <h1>{{ cur_post.title }}</h1>
                 <p v-html="compiledMarkdown"></p>
+                <h4>{{ getSlug(cur_post.title) }}</h4>
             </v-flex>
         </v-layout>
     </v-container>
@@ -34,6 +35,9 @@
                 window.axios.get('/api/post/'+this.$route.params.slug).then(({data}) => {
                     this.cur_post = data[0]
                 });
+
+            getSlug(title) {
+                return slug(title, { lower: true });
             }
         }
     }
