@@ -3,7 +3,7 @@
         <v-card>
                 <v-layout>
                     <v-flex xs2 md1 class="post-smallimg">
-                        <v-img src="https://cdn.vuetifyjs.com/images/cards/foster.jpg" height="125px" contain></v-img>
+                        <v-img src="https://cdn.vuetifyjs.com/images/cards/foster.jpg" width="100px" contain></v-img>
                     </v-flex>
                     <v-flex xs10 md11>
                         <v-card-title primary-title>
@@ -33,6 +33,10 @@
 </script>
 
 <style scoped>
+    .headline {
+        margin-top: -15px;
+    }
+
     .post-smallimg {
         padding: 15px;
     }
