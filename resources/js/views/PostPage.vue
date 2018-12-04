@@ -28,7 +28,7 @@
         data() {
             return {
                 cur_post: { title: '', text: '' },
-                input: "# Test\n```1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n```",
+                input: "# Test\n```php\n<?php\nprint(\"Test\");\n?>\n```",
             }
         },
 

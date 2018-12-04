@@ -47,12 +47,21 @@ import ContactPage from './views/ContactPage'
 import BlogPage from './views/BlogPage'
 import PostPage from './views/PostPage'
 
+import AdminIndex from './views/admin/AdminIndex'
+
+import AdminPostsList from './views/admin/AdminPostsList'
+import AdminPostCreate from './views/admin/AdminPostCreate'
+
 
 const routes = [
-    { path: '/', name: 'index', component: IndexPage },
-    { path: '/blog', name: 'blog', component: BlogPage },
-    { path: '/blog/:slug', name: 'post', component: PostPage },
-    { path: '/contacts', name: 'contacts', component: ContactPage },
+    { path: '/',                 name: 'index',             component: IndexPage },
+    { path: '/blog',             name: 'blog',              component: BlogPage },
+    { path: '/blog/:slug',       name: 'post',              component: PostPage },
+    { path: '/contacts',         name: 'contacts',          component: ContactPage },
+
+    { path: '/admin', name: 'adminIndex', component: AdminIndex },
+    { path: '/admin/posts/list', name: 'adminPostsList', component: AdminPostsList },
+    { path: '/admin/posts/new', name: 'adminPostCreate', component: AdminPostCreate },
 
     { path: '*', redirect: '/' },
 ];

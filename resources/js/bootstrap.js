@@ -1,6 +1,24 @@
 
 window._ = require('lodash');
-slug = require('slug')
+slug = require('slug');
+
+var hljs   = require('highlight.js');
+var marked = require('marked');
+
+marked.setOptions({
+    renderer: new marked.Renderer(),
+    highlight: function(code) {
+        return hljs.highlightAuto(code).value;
+    },
+    pedantic: false,
+    gfm: true,
+    tables: true,
+    breaks: false,
+    sanitize: false,
+    smartLists: true,
+    smartypants: false,
+    xhtml: false
+});
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
