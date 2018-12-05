@@ -51,6 +51,7 @@ import AdminIndex from './views/admin/AdminIndex'
 
 import AdminPostsList from './views/admin/AdminPostsList'
 import AdminPostCreate from './views/admin/AdminPostCreate'
+import AdminPostEdit from './views/admin/AdminPostEdit'
 
 
 const routes = [
@@ -60,8 +61,9 @@ const routes = [
     { path: '/contacts',         name: 'contacts',          component: ContactPage },
 
     { path: '/admin', name: 'adminIndex', component: AdminIndex },
-    { path: '/admin/posts/list', name: 'adminPostsList', component: AdminPostsList },
+    { path: '/admin/posts', name: 'adminPostsList', component: AdminPostsList },
     { path: '/admin/posts/new', name: 'adminPostCreate', component: AdminPostCreate },
+    { path: '/admin/posts/edit/:slug', name: 'adminPostEdit', component: AdminPostEdit },
 
     { path: '*', redirect: '/' },
 ];
