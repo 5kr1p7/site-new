@@ -2,8 +2,10 @@
     <v-container>
         <v-layout row wrap>
             <v-flex xs12>
-                <h1>{{ cur_post.title }}</h1>
-                <p v-html="getMarkdown(cur_post.text)"></p>
+                <h1 class="content-title">{{ cur_post.title }}</h1>
+            </v-flex>
+            <v-flex xs12>
+                <div class="content-body" v-html="getMarkdown(cur_post.text)"></div>
             </v-flex>
         </v-layout>
     </v-container>
@@ -59,6 +61,10 @@
 
     p {
         text-indent: 20px;
+    }
+
+    code {
+        text-indent: 0 !important;
     }
 
     h1 {
