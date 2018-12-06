@@ -18,6 +18,7 @@
     <link rel="manifest" href="/site.webmanifest?v=yyLoL2GPw3">
     <link rel="mask-icon" href="/safari-pinned-tab.svg?v=yyLoL2GPw3" color="#5bbad5">
     <link rel="shortcut icon" href="/favicon.ico?v=yyLoL2GPw3">
+    <link rel="sitemap" href="/sitemap.xml" type="application/xml" />
     <meta name="apple-mobile-web-app-title" content="AlexShangin.Ru">
     <meta name="application-name" content="AlexShangin.Ru">
     <meta name="msapplication-TileColor" content="#000000">

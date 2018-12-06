@@ -11,5 +11,6 @@
 |
 */
 
+Route::get('sitemap.xml', 'PostController@sitemap');
 Route::view('/', 'index');
 Route::view('{any}', 'index')->where('any', '.*');

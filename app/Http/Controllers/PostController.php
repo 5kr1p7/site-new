@@ -96,4 +96,10 @@ class PostController extends Controller
             Session::flash('error', 'Ошибка при удалении поста');
         }
     }
+
+    public function sitemap()
+    {
+        $posts = Post::get();
+        return view('sitemap')->with(compact('posts'));
+    }
 }
