@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Contact;
+
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -99,7 +102,10 @@ class PostController extends Controller
 
     public function sitemap()
     {
-        $posts = Post::get();
-        return view('sitemap')->with(compact('posts'));
+        $posts = Post::orderBy('updated_at', 'asc')->get();
+        $contact = Contact::orderBy('updated_at', 'desc')->first(['updated_at']);
+        $index = filemtime(resource_path('js/views/IndexPage.vue'));
+
+        return view('sitemap')->with(compact(['posts', 'contact', 'index']));
     }
 }
