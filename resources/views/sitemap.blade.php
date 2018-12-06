@@ -14,7 +14,7 @@
 
         <url>
             <loc>{{ url('/') }}</loc>
-            <lastmod>{{ Carbon\Carbon::parse(date("Y-m-d H:i:s", $index))->tz('GMT') }}</lastmod>
+            <lastmod>{{ Carbon\Carbon::parse(date("Y-m-d H:i:s", $index))->tz('GMT')->toAtomString() }}</lastmod>
             <changefreq>weekly</changefreq>
             <priority>0.9</priority>
         </url>
