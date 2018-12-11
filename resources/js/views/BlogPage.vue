@@ -1,6 +1,6 @@
 <template>
     <v-layout id="blogPosts" row wrap>
-        <post v-for="post in posts" :key="post.id" :title="post.title" :slug="post.slug">{{ post.partial }}</post>
+        <post v-for="post in posts" :key="post.id" :title="post.title" :slug="post.slug" :image_small="post.image_small">{{ post.partial }}</post>
     </v-layout>
 </template>
 

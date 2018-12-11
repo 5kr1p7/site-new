@@ -19,7 +19,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return response(Post::orderBy('created_at', 'desc')->get(['id', 'title', 'slug', 'partial', 'created_at', 'user_id'])->jsonSerialize(), Response::HTTP_OK);
+        return response(Post::orderBy('created_at', 'desc')->get()->jsonSerialize(), Response::HTTP_OK);
     }
 
     /**
@@ -51,7 +51,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        return response(Post::where('id', $id)->get(['id', 'title', 'slug', 'text', 'created_at', 'user_id'])->jsonSerialize(), Response::HTTP_OK);
+        return response(Post::where('id', $id)->get()->jsonSerialize(), Response::HTTP_OK);
     }
 
     public function showBySlug($slug)

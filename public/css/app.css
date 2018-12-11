@@ -10574,3 +10574,11 @@ code {
   padding: 15px;
 }
 
+.post_listitem {
+  text-decoration: none !important;
+}
+
+.post-partial {
+  padding-top: 20px;
+}
+
