@@ -60,10 +60,10 @@ const routes = [
     { path: '/blog/:slug',       name: 'post',              component: PostPage },
     { path: '/contacts',         name: 'contacts',          component: ContactPage },
 
-    { path: '/admin', name: 'adminIndex', component: AdminIndex },
-    { path: '/admin/posts', name: 'adminPostsList', component: AdminPostsList },
-    { path: '/admin/posts/new', name: 'adminPostCreate', component: AdminPostCreate },
-    { path: '/admin/posts/edit/:slug', name: 'adminPostEdit', component: AdminPostEdit },
+    { path: '/admin43', name: 'adminIndex', component: AdminIndex },
+    { path: '/admin43/posts', name: 'adminPostsList', component: AdminPostsList },
+    { path: '/admin43/posts/new', name: 'adminPostCreate', component: AdminPostCreate },
+    { path: '/admin43/posts/edit/:slug', name: 'adminPostEdit', component: AdminPostEdit },
 
     { path: '*', redirect: '/' },
 ];
