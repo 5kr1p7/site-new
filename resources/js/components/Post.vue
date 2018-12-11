@@ -2,10 +2,10 @@
     <v-flex d-flex xs12 md10 offset-md1 mt-3>
         <v-card>
                 <v-layout>
-                    <v-flex xs2 md1 class="post-smallimg">
-                        <v-img src="https://cdn.vuetifyjs.com/images/cards/foster.jpg" width="100px" contain></v-img>
+                    <v-flex xs3 md1 class="post-smallimg">
+                        <v-img :aspect-ratio="1/1" src="https://cdn.vuetifyjs.com/images/cards/foster.jpg" contain></v-img>
                     </v-flex>
-                    <v-flex xs10 md11>
+                    <v-flex xs9 md11>
                         <v-card-title primary-title>
                             <div>
                                 <div class="headline mb-0 post-title"><router-link :to="{ name: 'post', params: { slug: slug }}">{{ title }}</router-link>
