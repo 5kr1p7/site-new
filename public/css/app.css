@@ -10562,3 +10562,15 @@ body {
   padding-top: 4rem;
 }
 
+code:after,
+code:before,
+kbd:after,
+kbd:before {
+  content: "";
+  letter-spacing: -1px;
+}
+
+code {
+  padding: 15px;
+}
+
