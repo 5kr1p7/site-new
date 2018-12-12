@@ -56,7 +56,7 @@ class PostController extends Controller
 
     public function showBySlug($slug)
     {
-        return response(Post::where('slug', $slug)->get(['id', 'title', 'slug', 'text', 'created_at', 'user_id'])->jsonSerialize(), Response::HTTP_OK);
+        return response(Post::where('slug', $slug)->get()->jsonSerialize(), Response::HTTP_OK);
     }
 
     /**
