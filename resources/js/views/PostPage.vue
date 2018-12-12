@@ -18,7 +18,6 @@
         data() {
             return {
                 cur_post: { title: '', text: '' },
-                input: "# Test\n```php\n<?php\nprint(\"Test\");\n?>\n```",
             }
         },
 
@@ -27,9 +26,6 @@
         },
 
         computed: {
-            compiledMarkdown: function () {
-                return marked(this.input, { sanitize: true })
-            }
         },
 
         methods: {
