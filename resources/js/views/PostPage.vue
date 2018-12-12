@@ -43,7 +43,7 @@
                     document.head.querySelector('meta[property="og:description"]').content = this.cur_post.partial
                     document.head.querySelector('meta[property="og:title"]').content = this.cur_post.title
                     document.head.querySelector('meta[property="og:url"]').content = document.URL
-                    document.head.querySelector('meta[property="og:image"]').content = '/img/posts/small/'+this.cur_post.image_small
+                    document.head.querySelector('meta[property="og:image"]').content = document.URL.split('/')[0]+'//'+document.URL.split('/')[2]+'/img/posts/small/'+this.cur_post.image_small
                     document.head.querySelector('meta[name="twitter:title"]').content = this.cur_post.title
                     document.head.querySelector('meta[name="twitter:description"]').content = this.cur_post.partial
                 });
