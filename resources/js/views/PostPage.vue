@@ -40,6 +40,16 @@
             getPost() {
                 window.axios.get('/api/post/'+this.$route.params.slug).then(({data}) => {
                     this.cur_post = data[0];
+                    document.title = this.cur_post.title+' — AlexShangin.Ru'
+                    document.head.querySelector('meta[name=description]').content = this.cur_post.partial
+                    document.head.querySelector('meta[name=keywords]').content = this.cur_post.keywords
+
+                    document.head.querySelector('meta[property="og:description"]').content = this.cur_post.partial
+                    document.head.querySelector('meta[property="og:title"]').content = this.cur_post.title
+                    document.head.querySelector('meta[property="og:url"]').content = document.URL
+                    document.head.querySelector('meta[property="og:image"]').content = '/img/posts/small/'+this.cur_post.image_small
+                    document.head.querySelector('meta[name="twitter:title"]').content = this.cur_post.title
+                    document.head.querySelector('meta[name="twitter:description"]').content = this.cur_post.partial
                 });
             },
 
