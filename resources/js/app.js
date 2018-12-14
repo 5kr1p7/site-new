@@ -8,20 +8,19 @@
 require('./bootstrap');
 
 import 'babel-polyfill'
-import Vue from 'vue';
-import Vuetify from 'vuetify';
-import VueRouter from 'vue-router';
-import VueResource  from 'vue-resource';
+
+import App from './components/App.vue'
+import Vue from 'vue'
+import router from './router'
+import Vuetify from 'vuetify'
+import VueResource  from 'vue-resource'
 
 import en from 'vuetify/es5/locale/en'
 import ru from 'vuetify/es5/locale/ru'
 
-Vue.use(VueRouter)
+
 Vue.use(VueResource)
 Vue.use(Vuetify, { lang: { locales: { en, ru }, current: 'ru' }})
-
-
-window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -34,50 +33,11 @@ window.Vue = require('vue');
 const files = require.context('./', true, /\.vue$/i)
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
 // ----------------------------
 
-import IndexPage from './views/IndexPage'
-import ContactPage from './views/ContactPage'
-import BlogPage from './views/BlogPage'
-import PostPage from './views/PostPage'
-
-import AdminIndex from './views/admin/AdminIndex'
-
-import AdminPostsList from './views/admin/AdminPostsList'
-import AdminPostCreate from './views/admin/AdminPostCreate'
-import AdminPostEdit from './views/admin/AdminPostEdit'
 
 
-const routes = [
-    { path: '/',                 name: 'index',             component: IndexPage },
-    { path: '/blog',             name: 'blog',              component: BlogPage },
-    { path: '/blog/:slug',       name: 'post',              component: PostPage },
-    { path: '/contacts',         name: 'contacts',          component: ContactPage },
-
-    { path: '/admin43', name: 'adminIndex', component: AdminIndex },
-    { path: '/admin43/posts', name: 'adminPostsList', component: AdminPostsList },
-    { path: '/admin43/posts/new', name: 'adminPostCreate', component: AdminPostCreate },
-    { path: '/admin43/posts/edit/:slug', name: 'adminPostEdit', component: AdminPostEdit },
-
-    { path: '*', redirect: '/' },
-];
-
-// ----------------------------
-
-const router = new VueRouter({
-    mode: 'history',
-    routes: routes
-});
-
-
-
-const app = new Vue({
-    el: '#app',
-    router
+export default new Vue({
+    router,
+    render: h => h(App)
 });

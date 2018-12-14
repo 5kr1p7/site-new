@@ -14,24 +14,9 @@
     <title>@yield('title') — AlexShangin.Ru</title>
 </head>
 <body>
-    <div id="app">
-        <v-app light>
-            <div>
-                <toolbar></toolbar>
-                <v-content class="position-ref">
-                    <v-container fluid>
-                        <div class="content">
-                            <transition name="fade" mode="out-in">
-                                <router-view v-cloak></router-view>
-                            </transition>
-                        </div>
-                    </v-container>
-                </v-content>
-            </div>
-        </v-app>
-    </div>
-
+    @yield('content')
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="{{ mix('js/app.js') }}"></script>
+    <!-- <script src="{{ mix('js/app.js') }}"></script> -->
+    <script src="{{ asset('js/entry-client.js') }}" type="text/javascript"></script>
 </body>
 </html>

@@ -17,6 +17,27 @@ mix.browserSync(
 	proxy: "http://site.new"
     });
 
+/*
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css')
-   .version();
+    .sass('resources/sass/app.scss', 'public/css')
+    .version();
+*/
+mix
+    .js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
+    .version();
+
+
+mix
+    .js('resources/js/entry-client.js', 'public/js')
+    .js('resources/js/entry-server.js', 'public/js')
+;
+
+
+mix.webpackConfig({
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.runtime.common.js'
+    }
+  }
+});

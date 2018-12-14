@@ -1,15 +1,15 @@
 
 window._ = require('lodash');
-slug = require('slug');
+//slug = require('slug');
 
-var hljs   = require('highlight.js');
+//var hljs   = require('highlight.js');
 var marked = require('marked');
 
 marked.setOptions({
     renderer: new marked.Renderer(),
-    highlight: function(code) {
-        return hljs.highlightAuto(code).value;
-    },
+//    highlight: function(code) {
+//        return hljs.highlightAuto(code).value;
+//    },
     pedantic: false,
     gfm: true,
     tables: true,

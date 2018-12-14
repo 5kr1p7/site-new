@@ -3,4 +3,6 @@
 
 @section('content')
     <?php setlocale(LC_TIME, 'ru_RU.UTF-8'); ?>
+    <!--vue-ssr-outlet-->
+    {!! $ssr !!}
 @endsection
