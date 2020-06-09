@@ -19,7 +19,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return response(Post::orderBy('created_at', 'desc')->get()->jsonSerialize(), Response::HTTP_OK);
+        return response(Post::orderBy('created_at', 'desc')->get(['id', 'title', 'partial', 'slug', 'image_small', 'created_at'])->jsonSerialize(), Response::HTTP_OK);
     }
 
     /**
@@ -51,12 +51,19 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        return response(Post::where('id', $id)->get()->jsonSerialize(), Response::HTTP_OK);
+        return response(Post::where('id', $id)->get(['id', 'title', 'text', 'image_large', 'created_at'])->jsonSerialize(), Response::HTTP_OK);
     }
 
     public function showBySlug($slug)
     {
-        return response(Post::where('slug', $slug)->get()->jsonSerialize(), Response::HTTP_OK);
+	$post = Post::where('slug', $slug)->get(['id', 'title', 'text', 'image_large', 'created_at']);
+	
+	if ($post->count()) {	
+            return response($post->jsonSerialize(), Response::HTTP_OK);
+        } else {
+    	    $post = [ 'error' => 'Not found' ];
+    	    return response($post, Response::HTTP_NOT_FOUND);
+        }
     }
 
     /**
